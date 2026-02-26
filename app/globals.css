@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+
+:root {
+  /* Mode clair et sombre - fond noir velours partout */
+  --background: #121010; /* Noir velours background */
+  --foreground: #F5F5F5; /* Blanc cassé text */
+  --card: #1A1A1A; /* Cartes légèrement plus claires */
+  --card-foreground: #F5F5F5; /* Blanc cassé text on cards */
+  --popover: #1A1A1A; /* Popover */
+  --popover-foreground: #F5F5F5; /* Blanc cassé text on popover */
+  --primary: #D4AF37; /* Or doux primary */
+  --primary-foreground: #121010; /* Noir velours text on primary */
+  --secondary: #2A2A2A; /* Secondary sombre */
+  --secondary-foreground: #F5F5F5; /* Blanc cassé text on secondary */
+  --muted: #262626; /* Muted sombre */
+  --muted-foreground: #A0A0A0; /* Texte gris moyen */
+  --accent: #D4AF37; /* Or doux accent */
+  --accent-foreground: #121010; /* Noir velours text on accent */
+  --destructive: #DC2626; /* Rouge pour erreurs */
+  --destructive-foreground: #F5F5F5; /* Blanc cassé text on destructive */
+  --border: #333333; /* Bordures sombres */
+  --input: #2A2A2A; /* Input background sombre */
+  --ring: rgba(212, 175, 55, 0.5); /* Or doux ring avec opacité */
+  --radius: 0.5rem;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius: var(--radius);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Classes utilitaires */
+.gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 50%, #DAA520 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(18, 16, 16, 0.3);
+}
+
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
+}
